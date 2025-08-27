@@ -1,16 +1,25 @@
 # text_background_issue
 
-A new Flutter project.
+## Steps to repreduce
+Flutter 3.35.2 • channel stable  
 
-## Getting Started
+```dart
+Text(
+          'Test',
+          style:
+          TextStyle(
+            fontSize: 24,
+            background: Paint()
+              ..strokeWidth = 44
+              ..color = const Color(0x1a0078ff)
+              ..style = PaintingStyle.stroke
+              ..strokeJoin = StrokeJoin.round,
+          ),
+        )
+```
 
-This project is a starting point for a Flutter application.
+```
+flutter run
+```
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<img width="1920" height="1080" alt="Screenshot 2025-08-27 at 8 34 41 PM" src="https://github.com/user-attachments/assets/60dafda5-d595-4444-a0ef-75af3da05d80" />
